@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.icd4.icd6">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_bc"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_bc"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RiskFactorAge"></activity>
+        <activity android:name=".RiskFactorSmoke"></activity>
+        <activity android:name=".SecondHandSmoke"></activity>
+        <activity android:name=".PollutantLoad"></activity>
+        <activity android:name=".GeneticFactor"></activity>
+        <activity android:name=".Symptoms"></activity>
+        <activity android:name=".OncologyConsultation"></activity>
+
+    </application>
+
+</manifest>

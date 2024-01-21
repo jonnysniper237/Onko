@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Symptoms">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/symptoms_heading"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Symptome [Häufigkeit]" />
+
+            <CheckBox
+                android:id="@+id/persistent_cough"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/symptoms_heading"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/symptoms_heading"
+                android:text="hartnäckiger akuter Husten, der trotz adäquater Behandlung mit zum Beispiel Antibiotika mehr als zwei bis drei Wochen anhält [8-75%]"/>
+            <CheckBox
+                android:id="@+id/unintendet_weight_loss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/persistent_cough"
+                android:layout_below="@+id/persistent_cough"
+                android:text="ungewollter Gewichtsverlust [0-68%]"/>
+            <CheckBox
+                android:id="@+id/dyspnoea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/unintendet_weight_loss"
+                android:layout_below="@+id/unintendet_weight_loss"
+                android:text="Atemnot, pfeifende Atmung [3-60%]"/>
+            <CheckBox
+                android:id="@+id/chest_pain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/dyspnoea"
+                android:layout_below="@+id/dyspnoea"
+                android:text="Schmerzen im Brustbereich, Knochenschmerzen [6-49%]"/>
+            <CheckBox
+                android:id="@+id/sputum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/chest_pain"
+                android:layout_below="@+id/chest_pain"
+                android:text="blutiger und unblutiger Auswurf [6-35%]"/>
+            <CheckBox
+                android:id="@+id/fever_night_sweat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/sputum"
+                android:layout_below="@+id/sputum"
+                android:text="Fieberschübe und Nachtschweiß [0-20%]"/>
+            <CheckBox
+                android:id="@+id/fatigue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/fever_night_sweat"
+                android:layout_below="@+id/fever_night_sweat"
+                android:text="Abgeschlagenheit [0-10%]"/>
+            <CheckBox
+                android:id="@+id/hoarseness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/fatigue"
+                android:layout_below="@+id/fatigue"
+                android:text="Heiserkeit und/oder Schluckbeschwerden [-]"/>
+            <CheckBox
+                android:id="@+id/chronic_cough"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/hoarseness"
+                android:layout_below="@+id/hoarseness"
+                android:text="chronischer Husten, der seinen Charakter verändert [-]"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="90dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/button_symptoms_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Zurück" />
+
+    <Button
+        android:id="@+id/button_symptoms_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weiter"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+
+
+    
+</RelativeLayout>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <TextView
+        android:id="@+id/icdHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:ems="10"
+        android:gravity="center"
+        android:text="ICD" />
+
+
+        <TextView
+            android:id="@+id/icdQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="116dp"
+            android:ems="10"
+            android:gravity="center"
+            android:text="Liegt einer der folgenden ICDs vor?" />
+
+        <TextView
+            android:id="@+id/icdlist"
+            android:layout_width="256dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="170dp"
+            android:ems="10"
+            android:gravity="left" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="89dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/button_icdNo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ICD - Nein"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+
+    <Button
+        android:id="@+id/button_icdYes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ICD - Ja"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        style="@style/AppTheme"/>
+
+
+</RelativeLayout>

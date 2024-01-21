@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RiskFactorSmoke">
+
+    <TextView
+        android:id="@+id/smoker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Raucher?" />
+
+    <RadioGroup
+        android:id="@+id/smoker_choice"
+        android:layout_width="352dp"
+        android:layout_height="27dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/smoker"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/smoker_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Raucher" />
+
+        <RadioButton
+            android:id="@+id/ex_smoker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ex-Raucher" />
+
+        <RadioButton
+            android:id="@+id/no_smoker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nichtraucher" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/nicotine_abstinence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/smoker"
+        android:layout_marginTop="133dp"
+        android:text="Nikotinkarenz >10 Jahre?" />
+
+    <RadioGroup
+        android:id="@+id/nicotine_abstinence_choice"
+        android:layout_width="352dp"
+        android:layout_height="27dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/nicotine_abstinence"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/nicotine_abstinence_greater_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ja" />
+
+        <RadioButton
+            android:id="@+id/nicotine_abstinence_smaller_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nein" />
+
+    </RadioGroup>
+
+
+    <RadioGroup
+        android:id="@+id/cigarette_type"
+        android:layout_width="352dp"
+        android:layout_height="27dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/nicotine_abstinence"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/cigarette"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Zigarette?" />
+
+        <RadioButton
+            android:id="@+id/cigarello"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Zigarre, Zigarillo, Pfeife?" />
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/smoke_risk_fac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="100dp"
+        android:text="" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="89dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/button_smoke_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Zurück" />
+
+    <Button
+        android:id="@+id/button_smoke_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weiter"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+
+    <EditText
+        android:id="@+id/packs_per_day"
+        android:layout_width="179dp"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/smoker"
+        android:layout_marginTop="230dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/years_of_smoking"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignTop="@+id/packs_per_day"
+        android:layout_toEndOf="@+id/packs_per_day"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/packs_per_day_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/packs_per_day"
+        android:layout_alignStart="@+id/smoker"
+        android:layout_marginBottom="-222dp"
+        android:text="Packungen pro Tag?" />
+
+    <TextView
+        android:id="@+id/packs_years_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/smoker"
+        android:layout_marginBottom="211dp"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/years_of_smoking_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/packs_per_day"
+        android:layout_marginBottom="-222dp"
+        android:layout_toEndOf="@+id/packs_per_day"
+        android:text="Anzahl der Jahre?" />
+
+</RelativeLayout>

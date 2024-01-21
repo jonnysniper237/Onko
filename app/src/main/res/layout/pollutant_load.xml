@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PollutantLoad">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="90dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pollutant_load"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:text="Schadstoffbelastung" />
+
+            <TextView
+                android:id="@+id/pollutant_load_general"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/pollutant_load"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/pollutant_load"
+                android:text="1. Allgemeine Luftverunreinigung /\nFeinstaub über Jahre durch Verbrennungsprozesse in der Industrie, in Kohlekraftwerken, der Heizung von Haushalten im Verkehr" />
+
+            <TextView
+                android:id="@+id/pollutant_load_at_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/pollutant_load"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/pollutant_load_general"
+                android:text="2. Schadstoffbelastung am Arbeitsplatz" />
+
+            <RadioGroup
+                android:id="@+id/pollutant_load_choice"
+                android:layout_width="352dp"
+                android:layout_height="27dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/pollutant_load_at_work"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/pollutant_load_general_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1." />
+
+                <RadioButton
+                    android:id="@+id/pollutant_load_at_work_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2." />
+
+                <RadioButton
+                    android:id="@+id/no_pollutant_load"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Keine" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/kind_of_pollution_at_work"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/pollutant_load_choice"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/pollutant_load_choice"
+                android:text="Welche Art von Schadstoffen?" />
+
+            <TextView
+                android:id="@+id/pollution_silicon_etc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/pollutant_load"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/kind_of_pollution_at_work"
+                android:text="1. Siliziumdioxid, kristallin - Quarz-, Cristobalit-, Tridymitstaub" />
+
+            <TextView
+                android:id="@+id/pollution_radon_etc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignStart="@+id/pollutant_load"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/pollution_silicon_etc"
+                android:text="2. Radon, radioaktiven Strahlenquellen und/oder Röntgenstrahlung,\nKokereirohgase, PAK-Gemische und/oder PAK-haltigem Steinkohlenteerpech,\nChrom-VI-Verbindungen, Cadmium, Arsen, Asbest,\nNickel, metallisch und Nickelverbindungen" />
+
+            <RadioGroup
+                android:id="@+id/kind_of_pollution_at_work_choice"
+                android:layout_width="352dp"
+                android:layout_height="27dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/pollution_radon_etc"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/pollution_silicon_etc_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1." />
+
+                <RadioButton
+                    android:id="@+id/pollution_radon_etc_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2." />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/pollutant_load_risk_fac"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="100dp"
+        android:text="" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="90dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/button_pollutant_load_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Zurück" />
+
+    <Button
+        android:id="@+id/button_pollutant_load_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weiter"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+
+
+    
+</RelativeLayout>

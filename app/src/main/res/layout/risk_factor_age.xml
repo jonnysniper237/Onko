@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RiskFactorAge">
+
+    <TextView
+        android:id="@+id/sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Geschlecht" />
+
+    <RadioGroup
+        android:id="@+id/sex_choice"
+        android:layout_width="354dp"
+        android:layout_height="27dp"
+        android:layout_alignStart="@+id/sex"
+        android:layout_below="@+id/sex"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/female"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="weiblich" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="männlich" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/sex"
+        android:layout_marginTop="123dp"
+        android:text="Alter" />
+
+    <RadioGroup
+        android:id="@+id/age_choice_young"
+        android:layout_width="354dp"
+        android:layout_height="27dp"
+        android:layout_alignStart="@+id/sex"
+        android:layout_below="@+id/age"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/age_35_44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="35-44" />
+
+        <RadioButton
+            android:id="@+id/age_45_54"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="45-54" />
+
+        <RadioButton
+            android:id="@+id/age_55_64"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="55-64" />
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/age_choice_old"
+        android:layout_width="238dp"
+        android:layout_height="27dp"
+        android:layout_alignStart="@+id/sex"
+        android:layout_below="@+id/age_choice_young"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/age_65_74"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="65-74" />
+
+        <RadioButton
+            android:id="@+id/age_75_85"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="75-85" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="89dp"
+        android:background="?android:attr/listDivider" />
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Zurück" />
+
+    <Button
+        android:id="@+id/button_age_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weiter"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"/>
+</RelativeLayout>
